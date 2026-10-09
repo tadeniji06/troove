@@ -50,7 +50,7 @@ export function RevenueChart({ data }: RevenueChartProps) {
           />
           <RechartsTooltip 
             contentStyle={{ borderRadius: '8px', border: '1px solid var(--line)', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}
-            formatter={(value: number) => [`₦${value.toLocaleString()}`, 'Revenue']}
+            formatter={(value: any) => [`₦${Number(value).toLocaleString()}`, 'Revenue']}
           />
           <Area 
             type="monotone" 
